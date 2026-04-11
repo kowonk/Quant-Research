@@ -598,7 +598,7 @@ with tab_screener:
                 else: return "color: #ff4444"
             
             st.dataframe(
-                rdf.style.applymap(color_composite, subset=["Composite"]),
+                rdf.style.map(color_composite, subset=["Composite"]),
                 use_container_width=True,
                 height=min(700, 35 * len(rdf) + 38)
             )
